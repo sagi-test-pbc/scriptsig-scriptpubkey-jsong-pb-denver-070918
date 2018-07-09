@@ -1,18 +1,6 @@
 
 # Working with the Parser
 
-Every node, when receiving transactions makes sure that the transaction adheres to the network rules. This process is called _transaction validation_. Here are the main things that a node needs to check for:
-
-* Inputs of the transaction are previously unspent
-* Sum of the inputs > sum of the outputs
-* scriptSig actually unlocks the previous scriptPubKey
-
-The first aspect prevents double-spending. Any input that's already been spent cannot be spent again.
-
-The second aspect makes sure no new Bitcoins are created (except in a special transaction called the coinbase transaction. More on that in Chapter X).
-
-The third aspect makes sure that the smart contract resolves to True. In the vast majority of transactions, this means checking that the one or more signatures in the scriptSig are valid.
-
 ### Try it
 
 #### What is the scriptSig from the second input in this tx?
